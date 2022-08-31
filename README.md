@@ -48,7 +48,7 @@ docker-compose up
 
 To test that the program works correctly, it can be checked by accessing to `https://rickandmortyapi.com/api/character/?name=rick%20sanchez`.
 
-### Installation if using Docker
+### Installation without Docker
 To install this program, it will be necessary to install the requirements found in `requirements.txt`:
 ```
 pip install -r requirements.txt
