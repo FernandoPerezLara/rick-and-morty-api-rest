@@ -7,7 +7,8 @@ class Character():
 
   def __create_character(self, character):
     new_character = {
-      "name": character["name"]
+      "name": character["name"],
+      "episode": [int(episode.split("/")[-1]) for episode in character["episode"]]
     }
 
     return new_character
