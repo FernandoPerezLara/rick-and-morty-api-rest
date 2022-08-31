@@ -1,7 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/FernandoPerezLara/rick-and-morty-api-rest">
-    <img src="https://assets.stickpng.com/thumbs/58f37720a4fa116215a9240f.png" alt="Logo" width="100" height="100">
+    <img src="https://1000marcas.net/wp-content/uploads/2022/04/Rick-and-Morty.png" alt="Logo" width="100" height="100">
   </a>
 
   <h3 align="center">Rick & Morty: REST API</h3>
