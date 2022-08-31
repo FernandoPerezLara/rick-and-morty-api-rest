@@ -8,7 +8,7 @@ app.config["JSONIFY_PRETTYPRINT_REGULAR"] = True # Pretty print JSON
 # Function in charge of showing a message when the client is on "/"
 @app.route("/")
 def main():
-  return "To search, you must make a request like the following example: \"http://127.0.0.1:5000/search-character-appearance?name=Rick%20Sanchez\"."
+  return "To search, you must make a request like the following example: \"http://127.0.0.1:3456/search-character-appearance?name=Rick%20Sanchez\"."
 
 # Function in charge of searching a character by name and showing the result
 @app.route("/search-character-appearance")
@@ -28,4 +28,4 @@ def not_found(error):
   return f"404, Page not found"
 
 if __name__ == "__main__":
-  main()
+  app.run(host="0.0.0.0", port=3456) # Run the app on port 5000

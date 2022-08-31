@@ -1,5 +1,3 @@
-import time
-
 from .Request import * # Request class imported
 
 # Class in charge of making the request to the API and getting the correct results
