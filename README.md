@@ -48,6 +48,17 @@ docker-compose up
 
 To test that the program works correctly, it can be checked by accessing to `https://rickandmortyapi.com/api/character/?name=rick%20sanchez`.
 
+### Installation if using Docker
+To install this program, it will be necessary to install the requirements found in `requirements.txt`:
+```
+pip install -r requirements.txt
+```
+
+To run the program it will be necessary to execute the following command:
+```
+python ./src/main.py
+```
+
 ## Project structure
 The project code can be found inside the `./src/` folder.
 
