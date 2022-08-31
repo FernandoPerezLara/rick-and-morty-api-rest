@@ -5,14 +5,25 @@ class Request():
     self.__request = request
     
   def make_character_request(self):
-    request = requests.get(f"{self.__request}").json()
-    pages = request["info"]["pages"]
+    request = requests.get(f"{self.__request}")
 
-    if pages > 1:
-      for page in range(2, pages + 1):
-        request["results"].extend(requests.get(f"{self.__request}&page={page}").json()["results"])
+    if request.status_code == 200:
+      response = request.json()
 
-    return request["results"]
+      pages = response["info"]["pages"]
+
+      if pages > 1:
+        for page in range(2, pages + 1):
+          response["results"].extend(requests.get(f"{self.__request}&page={page}").json()["results"])
+
+      return response["results"]
+    else:
+      return []
 
   def make_episode_request(self):
-    return requests.get(f"{self.__request}").json()
+    request = requests.get(f"{self.__request}")
+
+    if request.status_code == 200:
+      return request.json()
+    else:
+      return []
